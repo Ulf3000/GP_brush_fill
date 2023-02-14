@@ -290,7 +290,7 @@ def add_proj_stroke(s, frame, plane_co, plane_no, mat_id=None):
     #new stroke
     ns = frame.strokes.new()#s['colorname']
     ns.display_mode = '3DSPACE'#default type is SCREEN, switch to 3DSPACE
-    ns.draw_cyclic = True#virtually close the shape (as last point is not overlapping first)
+    ns.use_cyclic = True#virtually close the shape (as last point is not overlapping first)
     
     #use active material of active object (get material with obj.active_material)
     ns.material_index = mat_id if mat_id else obj.active_material_index
